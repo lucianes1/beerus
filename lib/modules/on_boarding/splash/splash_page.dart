@@ -1,3 +1,4 @@
+import 'package:beerus/app/global/widgets/logo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'splash_controller.dart';
@@ -13,8 +14,9 @@ class SplashPage extends GetView<SplashController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('data'),
-            Text('Teste'),
+            Logo(
+              width: Get.width * 0.5,
+            ),
           ],
         ),
       ),

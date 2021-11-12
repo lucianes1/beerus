@@ -1,3 +1,7 @@
+import 'package:beerus/modules/auth/sign_in/binding.dart';
+import 'package:beerus/modules/auth/sign_in/page.dart';
+import 'package:beerus/modules/auth/sign_up/binding.dart';
+import 'package:beerus/modules/auth/sign_up/page.dart';
 import 'package:beerus/modules/home/home_binding.dart';
 import 'package:beerus/modules/home/home_page.dart';
 import 'package:beerus/modules/on_boarding/introduction/introduction_binding.dart';
@@ -23,6 +27,16 @@ abstract class AppPages {
       name: Routes.HOME,
       page: () => HomePage(),
       binding: HomeBinding(),
+    ),
+    GetPage(
+      name: Routes.SIGNIN,
+      page: () => SignInPage(),
+      binding: SignInBinding(),
+    ),
+    GetPage(
+      name: Routes.SIGNUP,
+      page: () => SignUpPage(),
+      binding: SignUpBinding(),
     ),
   ];
 }

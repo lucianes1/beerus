@@ -12,6 +12,7 @@ class PageViewCustom extends Container {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         image,
         Padding(

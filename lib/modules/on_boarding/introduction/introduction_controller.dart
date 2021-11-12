@@ -12,19 +12,19 @@ class IntroductionController extends GetxController {
       title: 'Compre sua cerveja sem sair de casa',
       description:
           'Encontre as mais diversas marcas de\ncervejas pilzens premium, puro malte\ne cervejas especiais.',
-      assetImage: 'assets/images/cooffe.jpg',
+      assetImage: 'assets/images/logo.png',
     ),
     SlideModel(
       title: 'Compre sua cerveja sem sair de casa',
       description:
           'Encontre as mais diversas marcas de\ncervejas pilzens premium, puro malte\ne cervejas especiais.',
-      assetImage: 'assets/images/cooffe.jpg',
+      assetImage: 'assets/images/logo.png',
     ),
     SlideModel(
       title: 'Compre sua cerveja sem sair de casa',
       description:
           'Encontre as mais diversas marcas de\ncervejas pilzens premium, puro malte\ne cervejas especiais.',
-      assetImage: 'assets/images/cooffe.jpg',
+      assetImage: 'assets/images/logo.png',
     ),
   ];
 

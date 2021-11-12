@@ -1,3 +1,5 @@
+import 'package:beerus/app/global/widgets/button_rounded.dart';
+import 'package:beerus/app/global/widgets/logo.dart';
 import 'package:beerus/modules/on_boarding/introduction/introduction_controller.dart';
 import 'package:beerus/modules/on_boarding/introduction/widgets/page_view_custom.dart';
 import 'package:beerus/modules/on_boarding/introduction/widgets/slide_dots.dart';
@@ -10,10 +12,7 @@ class IntroductionPage extends GetView<IntroductionController> {
     return Scaffold(
       backgroundColor: Colors.red,
       appBar: AppBar(
-        title: Image.asset(
-          'assets/images/cooffe.jpg',
-          width: 100,
-        ),
+        title: Logo(),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -46,7 +45,10 @@ class IntroductionPage extends GetView<IntroductionController> {
                   return PageViewCustom(
                     title: item.title,
                     description: item.description,
-                    image: Image.asset(item.assetImage),
+                    image: Image.asset(
+                      item.assetImage,
+                      width: Get.width * 0.8,
+                    ),
                   );
                 },
               ),
@@ -54,33 +56,21 @@ class IntroductionPage extends GetView<IntroductionController> {
           ],
         ),
       ),
-      bottomNavigationBar: InkWell(
-        onTap: controller.onButtonClick,
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              margin: EdgeInsets.only(bottom: 20),
-              width: 186,
-              height: 36,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black, blurRadius: 4, offset: Offset(0, 4)),
-                ],
-                color: Colors.amber,
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(20),
+        child: InkWell(
+          onTap: controller.onButtonClick,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ButtonRounded(
+                name: 'Proximo',
+                onTap: () => controller.onButtonClick(),
               ),
-              child: Align(
-                alignment: AlignmentDirectional.center,
-                child: Text(
-                  'Proximo',
-                ),
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
